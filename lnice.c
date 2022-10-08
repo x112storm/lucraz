@@ -71,9 +71,9 @@ static void parse_options(int ac, char **av)
 		switch(c) {
 			case 's':
 			case 'l':
-				sscanf(optarg, "%d", &latency_nice);
-				sattr.sched_latency_nice = latency_nice;
 				sattr.sched_flags |= SCHED_FLAG_LATENCY_NICE;
+				sattr.sched_latency_nice = latency_nice;
+				sscanf(optarg, "%d", &latency_nice);
 				pid = syscall(SYS_gettid);
 				if (syscall(SYS_sched_setattr, pid, &sattr, 0)) {
 					printf("Failed to do set latency_nice for pid=%d\n", pid);
