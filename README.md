@@ -1,2 +1,3 @@
 # lucraz
-a audio driver optimized for bluetooth conenctivity
+a audio driver optimized for bluetooth connectivity
+
