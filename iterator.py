@@ -1,4 +1,5 @@
-nop = print("adsfasf")
+print("starting iterator")
 
 while true:
-	nop
+    if 1 == 1:
+        print ("")
